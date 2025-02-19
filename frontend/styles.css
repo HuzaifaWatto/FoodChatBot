@@ -17,6 +17,16 @@ h1 {
     padding: 0;
 }
 
+iframe {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 430px;
+    border: none;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
 nav a {
     margin: 0 10px;
     text-decoration: none;
