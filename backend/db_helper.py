@@ -7,6 +7,28 @@ cnx = mysql.connector.connect(
     password="",
     database="pandeyji_eatery"
 )
+def delete_unfinished_orders(session_id):
+    """ Delete unfinished orders for the given session_id """
+    try:
+        cursor = cnx.cursor()
+
+        # Assuming 'orders' table has 'session_id' and 'status' columns
+        delete_query = "DELETE FROM orders WHERE session_id = %s AND status = 'in progress'"
+        cursor.execute(delete_query, (session_id,))
+
+        cnx.commit()
+        cursor.close()
+
+        print("Unfinished orders cleared successfully!")
+
+    except mysql.connector.Error as err:
+        print(f"Error deleting unfinished orders: {err}")
+        cnx.rollback()
+
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        cnx.rollback()
+
 
 # Function to call the MySQL stored procedure and insert an order item
 def insert_order_item(food_item, quantity, order_id):
