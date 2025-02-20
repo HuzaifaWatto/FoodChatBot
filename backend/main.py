@@ -21,6 +21,7 @@ async def handle_request(request: Request):
     session_id = generic_helper.extract_session_id(output_contexts[0]["name"])
 
     intent_handler_dict = {
+        'new.order': new_order,
         'order.add - context: ongoing-order': add_to_order,
         'order.remove - context: ongoing-order': remove_from_order,
         'order.complete - context: ongoing-order': complete_order,
@@ -28,6 +29,13 @@ async def handle_request(request: Request):
     }
 
     return intent_handler_dict[intent](parameters, session_id)
+
+def new_order(parameters: dict, session_id: str): 
+    del inprogress_orders[session_id]
+    fulfillment_text += f"New Order Started!"
+    return JSONResponse(content={
+        "fulfillmentText": fulfillment_text
+    })
 
 def save_to_db(order: dict):
     next_order_id = db_helper.get_next_order_id()
