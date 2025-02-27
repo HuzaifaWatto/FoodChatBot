@@ -68,7 +68,7 @@ Copy the generated **HTTPS URL** and paste it into Dialogflow's **webhook settin
 Feel free to fork the repository, raise issues, or submit pull requests to enhance this project.
 
 ## License
-This project is open-source and available under the MIT License.
+This project is licensed under the **GPL-3.0 License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
