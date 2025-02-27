@@ -33,7 +33,7 @@ pip install fastapi uvicorn mysql-connector-python
 
 ### 3. Set Up MySQL Database
 - Create a new MySQL database.
-- Import the provided SQL file (if available) to set up tables.
+- Import the provided SQL file to set up tables.
 - Update the database credentials in the `main.py` file.
 
 ### 4. Start the FASTAPI Server
@@ -61,8 +61,8 @@ Copy the generated **HTTPS URL** and paste it into Dialogflow's **webhook settin
 - Interact with the chatbot via the frontend or directly in Dialogflow.
 
 ## Video & Blog
-🎥 **YouTube Video**: [Watch Demo](#https://youtu.be/kWXNNT_rNXY?si=7V0cT9LoYosMW5rW)  
-📝 **Medium Blog**: [Read More](#https://medium.com/@huzaifawatto/building-foodchatbot-an-ai-powered-food-recommendation-chatbot-%EF%B8%8F-b92ad578c134)
+🎥 **YouTube Video**: [Watch Demo](https://youtu.be/kWXNNT_rNXY?si=7V0cT9LoYosMW5rW)  
+📝 **Medium Blog**: [Read More](https://medium.com/@huzaifawatto/building-foodchatbot-an-ai-powered-food-recommendation-chatbot-%EF%B8%8F-b92ad578c134)
 
 ## Contributing
 Feel free to fork the repository, raise issues, or submit pull requests to enhance this project.
